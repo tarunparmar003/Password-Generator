@@ -1,0 +1,213 @@
+body {
+  overflow-x: hidden;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(45deg, rgb(5, 5, 5), rgb(10, 10, 132));
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  gap: 1rem;
+}
+
+.container h1 {
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.display-container {
+  display: flex;
+  height: 2rem;
+}
+
+.display {
+  padding: 1.5rem;
+  width: 100%;
+  background-color: #0c2340;
+  border: 1px solid #0c2340;
+  color: rgb(0, 140, 255);
+  outline: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+input::placeholder {
+  color: gold;
+  font-size: 1.2rem;
+}
+
+.copyBtn {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background-color: #0c2340;
+  border: 1px solid #0c2340;
+  color: rgb(0, 140, 255);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.length-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: larger;
+  font-weight: 400;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: rgb(0, 140, 255);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.data-length-number {
+  color: gold;
+  font-weight: 500;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: gold;
+  box-shadow: 0px 0px 50px 5px gold;
+  cursor: pointer;
+}
+
+.input-container {
+  background-color: #0c2340;
+  padding: 1rem;
+  margin-top: 2rem;
+  box-shadow: 0 0 30px 10px rgb(0, 157, 255);
+  border-radius: 10px;
+}
+
+.check {
+  font-size: 1.2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+}
+.check input{
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border:1px solid gold;
+  cursor: pointer;
+  position: relative;
+  border-radius: 0.2rem;
+}
+
+.check input:checked{
+  background-color: #0c2340;
+}
+
+.check input:checked::before{
+  content:'\2713';
+  position: absolute;
+  color: gold;
+  margin-left: 2px;
+}
+
+.strength-container {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.generateButton {
+  width: 80%;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem; 
+  margin-left: 30px;
+  background-color:rgb(10, 87, 150);
+}
+
+.generateButton:hover {
+  background-color: rgb(0, 140, 255);
+  transition: transform 0.5s ease-in-out;
+  transform: scale(1.1);
+
+}
+.strength-container{
+  display: flex;
+  justify-content: space-between;
+  
+  align-items: center;
+
+}
+.indicator{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    display: flex;
+  }
+
+  .container {
+    width: 60%;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .display-container {
+    display: flex;
+    height: 2rem;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .generateButton {
+    width: 80%;
+    height: 50px;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: .7rem; 
+    margin-left: 25px;
+    background-color: rgb(0, 157, 255);
+  }
+  .check{
+  font-size: 1rem;
+}
+}
